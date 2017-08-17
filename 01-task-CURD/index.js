@@ -11,10 +11,10 @@ var Employees = JSON.parse(fs.readFileSync(
 
 switch (argv.operation) {
     case "add":
-        addEmployeeRecard(argv);
+        addEmployee(argv);
         break;
     case "delete":
-        deleteEmployeeRecard(argv);
+        deleteEmployee(argv);
         break;
     case "view":
         viewEmployee(argv);
@@ -26,7 +26,7 @@ switch (argv.operation) {
         console.log('Invalid parameters :)');
 }
 
-function addEmployeeRecard(emp) {
+function addEmployee(emp) {
     emp = checkEmployee(emp);
 
     if(emp != null){
@@ -63,7 +63,7 @@ function writeAtEmployeeFile(employees) {
     );
 }
 
-function deleteEmployeeRecard(emp) {
+function deleteEmployee(emp) {
     var dataFound = false;
     Employees.map(function (item, index) {
         if (emp.name && emp.name === item.name) {
