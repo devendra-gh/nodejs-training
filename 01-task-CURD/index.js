@@ -17,10 +17,10 @@ switch (argv.operation) {
         deleteEmployeeRecard(argv);
         break;
     case "view":
-        viewRecord(argv);
+        viewEmployee(argv);
         break;
     case "viewAll":
-        viewAllRecard();
+        viewAllEmployee();
         break;
     default:
         console.log('Invalid parameters :)');
@@ -79,12 +79,17 @@ function deleteEmployeeRecard(emp) {
     }
 }
 
-function viewRecord(emp) {
+function viewEmployee(emp) {
     var dataFound = false;
     Employees.map(function (item) {
         if (emp.name && emp.name === item.name) {
             dataFound = true;
-            console.log('Employee record found :)', item);
+            console.log(
+                'Employee record found',
+                '\n\tName: ', item.name,
+                '\n\tAge: ', item.age,
+                '\n\tCompany: ', item.company
+            );
         }
     });
     if(!dataFound){
@@ -92,11 +97,13 @@ function viewRecord(emp) {
     }
 }
 
-function viewAllRecard() {
+function viewAllEmployee() {
     console.log('Following Employee record found');
     Employees.map(function (item) {
-        console.log('\nName: ', item.name);
-        console.log('Age: ', item.age);
-        console.log('Company: ', item.company);
+        console.log(
+            '\n\tName: ', item.name,
+            '\n\tAge: ', item.age,
+            '\n\tCompany: ', item.company
+        );
     });
 }
