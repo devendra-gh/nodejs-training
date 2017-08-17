@@ -1,7 +1,7 @@
 const fs = require('fs');
 const importHelper = require('./helper');
 
-const addEmployeeRecard = function (emp, employees) {
+const addEmployee = function (emp, employees) {
     emp = importHelper.checkEmployee(emp, employees);
 
     if(emp != null){
@@ -18,5 +18,5 @@ const addEmployeeRecard = function (emp, employees) {
 };
 
 module.exports = {
-    addEmployeeRecard: addEmployeeRecard
+    addEmployee: addEmployee
 };

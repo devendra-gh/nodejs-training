@@ -26,3 +26,14 @@ node index.js --operation=view --name="holla"
 node index.js --operation=viewAll
 ```
 
+### Task-2 MODULES
+
+##### Following modules are:
+
+* Add Employee
+* Delete Employee
+* View Employee
+* View All Employee
+* Read Employee File
+* Helper
+

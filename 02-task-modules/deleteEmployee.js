@@ -1,6 +1,6 @@
 const importHelper = require('./helper');
 
-const deleteEmployeeRecard = function(emp, Employees) {
+const deleteEmployee = function(emp, Employees) {
     var dataFound = false;
     Employees.map(function (item, index) {
         if (emp.name && emp.name === item.name) {
@@ -17,5 +17,5 @@ const deleteEmployeeRecard = function(emp, Employees) {
 };
 
 module.exports = {
-    deleteEmployeeRecard: deleteEmployeeRecard
+    deleteEmployee: deleteEmployee
 };
